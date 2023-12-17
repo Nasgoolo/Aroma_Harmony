@@ -1,0 +1,102 @@
+
+.alert-dismissible {
+    padding-right: 1rem;
+}
+
+.alert_holiday{
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Bellota Text",cursive;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+    padding: 1px 1px;
+    border-radius: 5px;
+    background: linear-gradient(360deg,#FDD15B 0%,#FBEFC5 100%);
+    box-shadow: inset 0px -1px 1px #BEA560, inset 1px 1px 1px white;
+    position: absolute;
+    top: 50%;
+    right: 350px;
+    transform: translateY(-50%);
+}
+
+.new-year-banner{
+    font-family: "Bellota",cursive;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #283029;
+    text-shadow: 1px 0 0 #283029, 0 1px 0 #283029, -1px 0 0 #283029, 0 -1px 0 #283029;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 286px;
+    position: absolute;
+    top: 50%;
+    right: 600px;
+    transform: translateY(-50%);
+}
+
+.logo{
+    margin: 0 auto; /* Центрування в горизонтальному напрямку */
+}
+
+.logo img {
+  width: 100px;
+  height: 50px;
+  align-items: center;
+}
+
+.header{
+    background-color:#E1DAD2;
+    text-align: center;
+}
+
+.header_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login{
+     margin-left: auto; /* Розташувати вправо (від правого краю) */
+}
+
+.login img {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+}
+
+.phone {
+  margin-right: auto; /* Розташувати вліво (від лівого краю) */
+
+}
+
+.phone a {
+  margin-right: auto; /* Розташувати вліво (від лівого краю) */
+  color: #283029;
+  text-decoration: none;
+  right: 600px;
+}
+
+.phone img {
+  width: 25px;
+  height: 25    px;
+  align-items: center;
+}
+
+.search {
+  margin-left: auto; /* Розташувати вправо (від правого краю) */
+}
+
+.search img {
+  width: 25px;
+  height: 25    px;
+  align-items: center;
+}
+
+#dropdownMenu:hover .dropdown-menu,
+#dropdownMenu .dropdown-menu:hover {
+  display: block;
+}

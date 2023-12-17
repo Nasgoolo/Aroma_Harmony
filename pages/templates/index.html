@@ -1,14 +1,204 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Aroma Harmony</title>
-    </head>
-    <body>
-        <div class="header">
-            <nav>
-                <a  href="">Чайна Спадщина.ua</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Harmony</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="b--new-year-banner">
+            <div class="alert alert-dismissible fade show" role="alert">
+              <div style="position: relative;">
+                <div class="new-year-banner-pic">
+                  <img src="{% static 'img/bg.png' %}" alt="" style="width: 100%;">
+                </div>
+                <div class="new-year-banner">
+                    Подарунковi набори <br>
+                </div>
+                <div class="alert_holiday">
+                    <a href="/your-target-page" class="btn">Замовити набір</a>
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="header_main">
+            <div class="phone">
+              <div class="nav justify-content-center">
+                <div class="nav-item dropdown" id="dropdownMenu">
+                  <a class="nav-link" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    0951202319
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#"><img src="{% static 'img/telegram.png' %}" alt="telegram"></a>
+                    <a class="dropdown-item" href="#"><img src="{% static 'img/viber.png' %}" alt="telegram"></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">+380951202319</a>
+                    <a class="dropdown-item" href="#">+380663750415</a>
+                    <div class="dropdown-divider"></div>
+                    <div>пн-вс: 8:00 - 22:00 г. Павлоград, пер. Надречний, 33</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="logo">
+                <a class="logo" href="https://www.youtube.com">
+                  <img src="{% static 'img/logo.png' %}" alt="logo">
+                </a>
+            </div>
+            <div class="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#searchModal">
+                  <img src="{% static 'img/search.png' %}" alt="search">
+                </button>
+            </div>
+            <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Пошук</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="searchInput">Введіть слово для пошуку:</label>
+                        <input type="text" class="form-control" id="searchInput" placeholder="Введіть слово">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                    <button type="button" class="btn btn-primary" onclick="search()">Пошук</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="login">
+                <a class="nav-link" href="/login">
+                  <img src="{% static 'img/registration.png' %}" alt="registration">
+                </a>
+            </div>
+        </div>
+        <div class="header_nav">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav justify-content-center">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Чай
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Пуер</a>
+                          <a class="dropdown-item" href="#">Чорний чай</a>
+                          <a class="dropdown-item" href="#">Зелений чай</a>
+                          <a class="dropdown-item" href="#">Трав'яний і квітковий чай</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Кава
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Кава в зернах</a>
+                          <a class="dropdown-item" href="#">Кава мелена</a>
+                          <a class="dropdown-item" href="#">Арабіка</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Какао
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Какао боби і крупка</a>
+                          <a class="dropdown-item" href="#">Какао-порошок</a>
+                          <a class="dropdown-item" href="#">Шоколадні напої</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Посуд
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Чайники</a>
+                          <a class="dropdown-item" href="#">Чашки</a>
+                          <a class="dropdown-item" href="#">Набори посуду</a>
+                          <a class="dropdown-item" href="#">Чайні аксесуари</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Десерти
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Джем</a>
+                          <a class="dropdown-item" href="#">Сухофрукти</a>
+                          <a class="dropdown-item" href="#">Цукерки</a>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
             </nav>
         </div>
-    </body>
+    </div>
+    <div class="body">
+      <div class="banner">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'img/ukraine1.jpg' %}" alt="First slide"  height="auto">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/ukraine2.jpg' %}" alt="Second slide" height="auto">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/ukraine3.jpg' %}" alt="Third slide" height="auto">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/ukraine4.jpg' %}" alt="Аourth slide" height="auto">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+      <p>Чайні традиції в Україні володіють глибокими корінями і мають особливий характер. Чай українці вітають не лише як засіб зігріття у холодні дні, але і як можливість об'єднати близьких та гостей за чашкою ароматного напою.
+
+Традиційно чай подається в глиняних посудинах або фарфорових чайниках. Українці віддають перевагу натуральним трав'яним чаям, таким як липовий, м'ятний, чорничний або з ромашкою. Часто використовують і власноруч зібрані трави з полів і лісів.
+
+Споживання чаю супроводжується розмовами та традиційними українськими печивами, такими як пампушки, коржики, чи медові пряники. Це єдиний момент, коли сім'я або гості можуть відпочити, насолоджуючись теплом напою та приємною бесідою.
+
+На селі та в деяких регіонах зберігається традиція чаювання в банях чи природних лікарнях. Після паровання в бані українці люблять випити чаю з трав'яними добавками, що сприяє відновленню сил та покращенню здоров'я.
+
+Таким чином, чайні традиції в Україні – це не просто прийом їжі, а важливий аспект культури, який сприяє об'єднанню людей та передачі спадщини від покоління до покоління.</p>
+
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Мій веб-сайт. Усі права захищено.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Політика конфіденційності</a></li>
+                <li><a href="#">Умови використання</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
 </html>
